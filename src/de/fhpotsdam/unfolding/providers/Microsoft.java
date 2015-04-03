@@ -35,8 +35,13 @@ public class Microsoft {
 
 	public static class RoadProvider extends MicrosoftProvider {
 		public String[] getTileUrls(Coordinate coordinate) {
-			String url = "http://r" + (int) random(0, 4) + ".ortho.tiles.virtualearth.net/tiles/r"
-					+ getZoomString(sourceCoordinate(coordinate)) + ".png?g=90&shading=hill";
+			// this line support english mode.
+			//String url = "http://r" + (int) random(0, 4) + ".ortho.tiles.virtualearth.net/tiles/r"
+			//+ getZoomString(sourceCoordinate(coordinate)) + ".png?g=90&shading=hill";
+			
+			//This line support chinese mode
+			String url = "http://r" + (int) random(0, 4) + ".tiles.ditu.live.com/tiles/r"
+					+ getZoomString(sourceCoordinate(coordinate)) + ".png?g=47";
 			return new String[] { url };
 		}
 	}
